@@ -93,9 +93,9 @@ $RECYCLE.BIN/
 *.lnk
 
 
-3. Text Editor/IDE
+# 3. Text Editor/IDE
 #======================================================================
-1. Eclipse
+# i. Eclipse
 #======================================================================
 .metadata
 bin/
@@ -278,7 +278,7 @@ xcuserdata/
 
 cmake-build*
 
-4. Development/Build Generated
+# 4. Development/Build Generated
 #======================================================================
 # i. CMake
 #======================================================================
@@ -333,3 +333,7 @@ CTestTestfile.cmake
 *.su
 *.idb
 *.pdb
+
+# 5. Data
+/data
+/downloads
