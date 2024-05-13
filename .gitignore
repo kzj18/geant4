@@ -153,9 +153,6 @@ local.properties
 .scala_dependencies
 .worksheet
 
-# VSCode
-.vscode
-
 # QtCreator
 CMakeLists.txt.user
 
@@ -244,7 +241,8 @@ tags
 # vi. VisualStudio/Code
 #======================================================================
 .vscode/*
-!.vscode/settings.json
+!.vscode/.templates
+!.vscode/c_cpp_properties.json
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json

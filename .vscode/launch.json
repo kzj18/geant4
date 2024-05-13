@@ -1,0 +1,167 @@
+{
+    // 使用 IntelliSense 了解相关属性。 
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "exampleB1",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/examples/build/basic/B1/exampleB1",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/examples/build/basic/B1",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "为 gdb 启用整齐打印",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "将反汇编风格设置为 Intel",
+                    "text": "-gdb-set disassembly-flavor intel",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+        {
+            "name": "exampleB1 run2.mac",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/examples/build/basic/B1/exampleB1",
+            "args": ["${workspaceFolder}/examples/build/basic/B1/run2.mac"],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/examples/build/basic/B1",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "为 gdb 启用整齐打印",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "将反汇编风格设置为 Intel",
+                    "text": "-gdb-set disassembly-flavor intel",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+        {
+            "name": "exampleB1 exampleB1.in > exampleB1.out",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/examples/build/basic/B1/exampleB1",
+            "args": [
+                "${workspaceFolder}/examples/build/basic/B1/exampleB1.in",
+                ">",
+                "${workspaceFolder}/examples/build/basic/B1/exampleB1.out"
+            ],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/examples/build/basic/B1",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "为 gdb 启用整齐打印",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "将反汇编风格设置为 Intel",
+                    "text": "-gdb-set disassembly-flavor intel",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+        {
+            "name": "exMPI01 run.mac",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/examples/build/extended/parallel/MPI/examples/exMPI01/exMPI01",
+            "args": ["${workspaceFolder}/examples/build/extended/parallel/MPI/examples/exMPI01/run.mac"],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/examples/build/extended/parallel/MPI/examples/exMPI01",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "为 gdb 启用整齐打印",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "将反汇编风格设置为 Intel",
+                    "text": "-gdb-set disassembly-flavor intel",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+        {
+            "name": "mpirun exMPI01 run.mac",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "/usr/bin/mpirun",
+            "args": [
+                "${workspaceFolder}/examples/build/extended/parallel/MPI/examples/exMPI01/exMPI01",
+                "${workspaceFolder}/examples/build/extended/parallel/MPI/examples/exMPI01/run.mac"
+            ],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/examples/build/extended/parallel/MPI/examples/exMPI01",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "为 gdb 启用整齐打印",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "将反汇编风格设置为 Intel",
+                    "text": "-gdb-set disassembly-flavor intel",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+        {
+            "name": "exMPI01 v.mac",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/examples/build/extended/parallel/MPI/examples/exMPI01/exMPI01",
+            "args": ["${workspaceFolder}/examples/build/extended/parallel/MPI/examples/exMPI01/v.mac"],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/examples/build/extended/parallel/MPI/examples/exMPI01",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "为 gdb 启用整齐打印",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "将反汇编风格设置为 Intel",
+                    "text": "-gdb-set disassembly-flavor intel",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+        {
+            "name": "Python Debug Current File",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "justMyCode": false
+        }
+    ]
+}
