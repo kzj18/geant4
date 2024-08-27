@@ -140,6 +140,7 @@ if [[ "$response" =~ ^(yes|y)$ ]]; then
         -DGEANT4_USE_OPENGL_X11=ON \
         -DGEANT4_USE_PYTHON=ON \
         -DGEANT4_USE_QT=ON \
+        -DGEANT4_USE_GDML=ON \
         -DGEANT4_USE_RAYTRACER_X11=ON \
         -DCMAKE_INSTALL_PYTHONDIR=$CMakeInstallPythonFolder \
         -DGEANT4_INSTALL_EXAMPLES=OFF \

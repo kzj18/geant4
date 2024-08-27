@@ -66,6 +66,39 @@
 					"args": ["-ic"]
 				}
 			}
+		},
+		{
+			"type": "shell",
+			"label": "Build GDML",
+			"command": [
+				"mkdir -p ${workspaceFolder}/examples/build/extended/persistency/gdml",
+				"&&",
+				"cd ${workspaceFolder}/examples/build/extended/persistency/gdml",
+				";",
+				"rm -r ./CMakeFiles ./CMakeCache.txt ./Makefile",
+				";",
+				"cmake ${workspaceFolder}/extended/persistency/gdml -DCMAKE_BUILD_TYPE=RelWithDebInfo",
+				"&&",
+				"make -j"
+			],
+			"presentation": {
+				"echo": true,
+				"reveal": "always",
+				"focus": false,
+				"panel": "shared",
+				"showReuseMessage": true,
+				"clear": false
+			},
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"options": {
+				"shell": {
+					"executable": "/bin/bash",
+					"args": ["-ic"]
+				}
+			}
 		}
 	]
 }
