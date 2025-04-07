@@ -26,6 +26,41 @@ set(CMAKE_USER_MAKE_RULES_OVERRIDE_CXX
    ${CMAKE_SOURCE_DIR}/cmake/Modules/G4MakeRules_cxx.cmake)
 
 #-----------------------------------------------------------------------
+# - 指定使用g++-12及以下的编译器
+#
+if(NOT CMAKE_CXX_COMPILER)
+  # 检查g++-12是否存在
+  find_program(GXX12_COMPILER g++-12)
+  if(GXX12_COMPILER)
+    set(CMAKE_CXX_COMPILER "${GXX12_COMPILER}")
+  else()
+    # 检查g++-11是否存在
+    find_program(GXX11_COMPILER g++-11)
+    if(GXX11_COMPILER)
+      set(CMAKE_CXX_COMPILER "${GXX11_COMPILER}")
+    else()
+      # 检查g++-10是否存在
+      find_program(GXX10_COMPILER g++-10)
+      if(GXX10_COMPILER)
+        set(CMAKE_CXX_COMPILER "${GXX10_COMPILER}")
+      else()
+        # 检查g++-9是否存在
+        find_program(GXX9_COMPILER g++-9)
+        if(GXX9_COMPILER)
+          set(CMAKE_CXX_COMPILER "${GXX9_COMPILER}")
+        endif()
+      endif()
+    endif()
+  endif()
+  
+  if(CMAKE_CXX_COMPILER)
+    message(STATUS "自动选择C++编译器: ${CMAKE_CXX_COMPILER}")
+  else()
+    message(STATUS "未找到指定的g++编译器，将使用CMake默认编译器")
+  endif()
+endif()
+
+#-----------------------------------------------------------------------
 # - Project definition and basic configuration
 #   Version handled manually as project(... VERSION ...) is not used
 #   in tests/examples which are subprojects. All calls must use
